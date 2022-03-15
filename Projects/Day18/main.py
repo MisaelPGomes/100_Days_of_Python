@@ -61,6 +61,8 @@ def draw_shape(num_sides):
 #    tim.forward(30)
 #    tim.seth(random.choice(coord))
 tim.speed("fastest")
+
+
 def draw_circle (gap_size):
 
     for _ in range (int((360/gap_size))):
@@ -69,7 +71,7 @@ def draw_circle (gap_size):
         tim.circle(100)
         tim.setheading(tim.heading()+gap_size)
 
-draw_circle(20)
+draw_circle(5)
 
 
 
