@@ -3,7 +3,6 @@ import turtle
 from turtle import Turtle, Screen
 screen = Screen()
 tim = Turtle()
-# Generate polygons with different random colors
 
 turtle.colormode(255)
 
