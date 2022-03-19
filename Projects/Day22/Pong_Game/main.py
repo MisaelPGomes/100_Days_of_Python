@@ -49,14 +49,14 @@ while is_game_on:
     if ball.xcor() > 380:
         ball.restart_position()
         ball.bounce_x()
-        scoreboard.r_point()
+        scoreboard.l_point()
 
 
     # R Paddle misses ball
     if ball.xcor() < -380:
         ball.restart_position()
         ball.bounce_x()
-        scoreboard.l_point()
+        scoreboard.r_point()
 
 
 
