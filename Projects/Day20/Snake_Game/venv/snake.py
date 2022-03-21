@@ -16,6 +16,7 @@ class Snake:
     def create_snake(self):
         for position in SNAKE_POSITION:
             self.add_segment(position)
+            
 
     def add_segment(self, position):
         new_segment = Turtle("square")
@@ -53,3 +54,9 @@ class Snake:
             self.head.setheading(RIGHT)
 
 
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1000, 1000)
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
