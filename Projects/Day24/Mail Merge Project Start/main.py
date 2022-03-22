@@ -1,5 +1,5 @@
 
-import os
+
 
 # First step is to save the names from the invited_names.txt file to a list of names:
 
@@ -18,10 +18,10 @@ for name in names:
         text = f.read()
         x = text.replace("[name]", new_name)
 
-        with open("Output/ReadyToSend/invited_name.txt", mode="w") as l:
-            l.write(x)
+        with open(f"Output/ReadyToSend/letter_for_{new_name}.txt", mode="w") as letter_file:
+            letter_file.write(x)
 
             # Using os library it was possible to rename the file with each person of the list
 
-        os.rename(r"Output/ReadyToSend/invited_name.txt", "Output/ReadyToSend/invited_" + new_name + ".txt")
+
 
