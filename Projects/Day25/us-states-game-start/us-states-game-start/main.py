@@ -11,7 +11,7 @@ game_on = True
 count = 0
 
 guessed_states = []
-study_state = []
+
 while game_on:
 
     # Save the typed state and check if it is on the database
@@ -21,10 +21,9 @@ while game_on:
     all_states = estados["state"].to_list()
 
     if answer_state == "Exit":
-        for state in all_states:
-            if state not in guessed_states:
-                study_state.append(state)
-
+        # Code rewritten using list comprehension
+        study_state = [state for state in all_states if state not in guessed_states]
+       
         break
 
     for state in all_states:
